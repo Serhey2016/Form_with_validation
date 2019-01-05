@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <form action="" class="form">
+            
+            <input type="text" class="form__input" placeholder="First name*" required pattern="[^\d]">
+            <input type="text" class="form__input" placeholder="Last name*" required>
+            <input type="date" class="form__input" placeholder="Birthday*" required>
+                     <span class="inlabel">
+                     <span class="form__labelp">Gender*</span>
+                      <input name="group1" type="radio" required/>
+                      <span>Man</span>
+                      <input name="group1" type="radio" required/>
+                      <span>Woman</span>
+                      </span>
+                
+            <span class="form__radio">Country*</span>    
+            <select class="form__select" required>
+                    <option></option>
+                    <option>Ukraine</option>
+                    <option>England</option>
+            </select>
+              
+            <input type="email" class="form__input" placeholder="Email*" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+           
+            <input type="password" class="form__input" placeholder="Password*" required>
+           
+            <input type="text" class="form__input" placeholder="Address*" required>
+      
+            <label for="rb1" class="notes__label">Notes</label>
+            <textarea rows="2" id="rb1" name="textarea" class="form__textarea"></textarea>
+            <button class="form__button" type="submit" id="button" onclick="alert('Validation passed.')">Submit</button>
+        
+    </form>
+
+
+
+
+</body>
+<script src="js.js"></script>
+<script>
+   $('document').ready(function() {
+  $('#button').on('click', function() {
+    $('input[required]').addClass('req');
+         });
+    });
+</script>
+</html>
